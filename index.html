@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta para mi niña preciosa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #1a1a1d, #000000);
+      color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 90%;
+      background: rgba(20, 20, 20, 0.85);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.3);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #ff9ecf;
+      margin-bottom: 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #e8e8e8;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    p:hover {
+      transform: scale(1.02);
+    }
+
+    iframe {
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      width: 100%;
+      height: 152px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff6699;
+      font-size: 1.2rem;
+      opacity: 0.8;
+      animation: fall 6s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10%) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(110%) rotate(360deg); opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 0.95rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .container {
+        padding: 1.2rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts"></div>
+  <div class="container">
+    <h1>¿Noche… 30? ¿Pero es de día?</h1>
+    <p>Mi niña preciosa<br><br>
+    Te mando apropósito este texto con el fin de alegrar tu día y preparar tus emociones.
+    Te quiero recordar que eres la octava maravilla del mundo, mi constelación más hermosa, mi princesa y mi reina hermosa, mi niña, mi CONSENTIDA.
+    Quiero verte lograr cientos de cosas en tu vida, ser ese acompañante que, en vez de obstaculizar tu camino, lo vaya liberando y facilitando a medida que pasa el tiempo, en donde la manera en la que me agradezcas sea cuando hayas logrado tus metas y sueños, objetivos y deseos. Me enamoré de ti, esa persona que se le cruzan los cables, que se burla de la gente y que responde en automático, que chilla cuando alcanzas mucha frustración, que te encanta pelear y armar conflicto, pero que, a la vez, te enterneces cuando te hablo lindo, que te vuelves súper consentida a mi lado, esa es la mujer de la cual me enamoré, no de aquello que puedas aparentar.<br><br>
+    Quisiera bajarte el cielo, pero sé que en este momento no puedo, así que lo único que puedo pedirte es tiempo, en lo que terminamos tanto tú como yo de desarrollar nuestra vida, porque si me acompañas en este proceso, sé que te recompensaré bajándote todo y que esté a tus pies.<br><br>
+    Eres y serás mi eterno amor, mi amor que desde el momento uno sabía que podía existir, pero me negué viéndote como amiga, hasta que ese día llegó, y no pude contener más mis sentimientos, y sé que si sentías lo mismo que yo, volveríamos a hablar y lo intentaríamos de verdad.<br><br>
+    Te amo como no te lo imaginas, permíteme conocerte más, permíteme estar en tu vida, permíteme acompañarte y ser tu apoyo, tu guía cuando lo necesites, tu soporte, déjame cuidar tu corazón con todo lo que tengo.
+    </p>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/65fpYBrI8o2cfrwf2US4gq?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <script>
+    const heartsContainer = document.querySelector('.hearts');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = Math.random() * 1.5 + 0.8 + 'rem';
+      heart.style.animationDuration = Math.random() * 4 + 4 + 's';
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
