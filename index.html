@@ -7,11 +7,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -22,6 +18,7 @@
       align-items: center;
       min-height: 100vh;
       overflow-x: hidden;
+      flex-direction: column;
     }
 
     .container {
@@ -52,15 +49,24 @@
       transition: transform 0.3s ease;
     }
 
-    p:hover {
-      transform: scale(1.02);
+    p:hover { transform: scale(1.02); }
+
+    .music-btn {
+      margin-top: 1.5rem;
+      background: linear-gradient(45deg, #ff6699, #ff3366);
+      color: white;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.8rem 1.8rem;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+      transition: transform 0.3s, background 0.3s;
     }
 
-    iframe {
-      border-radius: 12px;
-      margin-top: 1.5rem;
-      width: 100%;
-      height: 152px;
+    .music-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ff3366, #ff99cc);
     }
 
     @keyframes fadeIn {
@@ -98,25 +104,10 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        font-size: 0.95rem;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      .container {
-        padding: 1.2rem;
-      }
-      p {
-        font-size: 0.95rem;
-      }
-    }
-        iframe {
-      position: absolute;
-      width: 0;
-      height: 0;
-      opacity: 0;
-      pointer-events: none;
+      body { font-size: 0.95rem; }
+      h1 { font-size: 1.8rem; }
+      .container { padding: 1.2rem; }
+      p { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -124,28 +115,24 @@
   <div class="hearts"></div>
   <div class="container">
     <h1>Noche 30.</h1>
-    <p>Mi niña preciosa<br><br>
-    Esta noche será más especial que las demás.<br><br>
-
-    Te quiero recordar que eres la octava maravilla del mundo, mi constelación más hermosa, mi princesa y mi reina hermosa, mi niña, mi CONSENTIDA.
-    Quiero verte lograr cientos de cosas en tu vida, ser ese acompañante que, en vez de obstaculizar tu camino, lo vaya liberando y facilitando a medida que pasa el tiempo, en donde la manera en la que me agradezcas sea cuando hayas logrado tus metas y sueños, objetivos y deseos. Me enamoré de ti, esa persona que se le cruzan los cables, que se burla de la gente y que responde en automático, que chilla cuando alcanzas mucha frustración, que te encanta pelear y armar conflicto, pero que, a la vez, te enterneces cuando te hablo lindo, que te vuelves súper consentida a mi lado, esa es la mujer de la cual me enamoré, no de aquello que puedas aparentar.<br><br>
-    Quisiera bajarte el cielo, pero sé que en este momento no puedo, así que lo único que puedo pedirte es tiempo, en lo que terminamos tanto tú como yo de desarrollar nuestra vida, porque si me acompañas en este proceso, sé que te recompensaré bajándote todo y que esté a tus pies.<br><br>
-    Eres y serás mi eterno amor, mi amor que desde el momento uno sabía que podía existir, pero me negué viéndote como amiga, hasta que ese día llegó, y no pude contener más mis sentimientos, y sé que si sentías lo mismo que yo, volveríamos a hablar y lo intentaríamos de verdad.<br><br>
-    Te amo como no te lo imaginas, permíteme conocerte más, permíteme estar en tu vida, permíteme acompañarte y ser tu apoyo, tu guía cuando lo necesites, tu soporte, déjame cuidar tu corazón con todo lo que tengo.
+    <p>
+      Mi niña preciosa<br><br>
+      Esta noche será más especial que las demás.<br><br>
+      Te quiero recordar que eres la octava maravilla del mundo, mi constelación más hermosa, mi princesa y mi reina hermosa, mi niña, mi CONSENTIDA.
+      Quiero verte lograr cientos de cosas en tu vida, ser ese acompañante que, en vez de obstaculizar tu camino, lo vaya liberando y facilitando a medida que pasa el tiempo, en donde la manera en la que me agradezcas sea cuando hayas logrado tus metas y sueños, objetivos y deseos. Me enamoré de ti, esa persona que se le cruzan los cables, que se burla de la gente y que responde en automático, que chilla cuando alcanzas mucha frustración, que te encanta pelear y armar conflicto, pero que, a la vez, te enterneces cuando te hablo lindo, que te vuelves súper consentida a mi lado, esa es la mujer de la cual me enamoré, no de aquello que puedas aparentar.<br><br>
+      Quisiera bajarte el cielo, pero sé que en este momento no puedo, así que lo único que puedo pedirte es tiempo, en lo que terminamos tanto tú como yo de desarrollar nuestra vida, porque si me acompañas en este proceso, sé que te recompensaré bajándote todo y que esté a tus pies.<br><br>
+      Eres y serás mi eterno amor, mi amor que desde el momento uno sabía que podía existir, pero me negué viéndote como amiga, hasta que ese día llegó, y no pude contener más mis sentimientos, y sé que si sentías lo mismo que yo, volveríamos a hablar y lo intentaríamos de verdad.<br><br>
+      Te amo como no te lo imaginas, permíteme conocerte más, permíteme estar en tu vida, permíteme acompañarte y ser tu apoyo, tu guía cuando lo necesites, tu soporte, déjame cuidar tu corazón con todo lo que tengo.
     </p>
-    <iframe 
-      scrolling="no"
-      frameborder="no"
-      allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/atlanticrecords/zac-efron-zendaya-rewrite-the-stars&color=%23ff3366&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
-    </iframe>
-
-
+    <button class="music-btn" onclick="playMusic()">💞 Canción Especial </button>
   </div>
+
+  <audio id="bg-music" loop>
+    <source src="audio/Song.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
     const heartsContainer = document.querySelector('.hearts');
-
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
@@ -154,11 +141,14 @@
       heart.style.fontSize = Math.random() * 1.5 + 0.8 + 'rem';
       heart.style.animationDuration = Math.random() * 4 + 4 + 's';
       heartsContainer.appendChild(heart);
-
       setTimeout(() => heart.remove(), 6000);
     }
-
     setInterval(createHeart, 300);
+
+    function playMusic() {
+      const audio = document.getElementById('bg-music');
+      audio.play().catch(err => console.log("El navegador bloqueó la reproducción:", err));
+    }
   </script>
 </body>
 </html>
